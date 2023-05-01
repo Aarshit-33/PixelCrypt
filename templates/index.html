@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>PSC Innovative</title>
+</head>
+
+<body class="bg-gradient-to-r from-emerald-300 to-blue-500 overflow-auto">
+    <div class="frame flex flex-col items-center justify-around h-screen w-screen overflow-auto">
+        <div class="inp">
+            <form id="frm" class="w-full space-x-24 flex items-center justify-around text-white" action="" method="POST"
+                enctype="multipart/form-data">
+                <div
+                    class="file-inp flex items-center space-x-6  bg-slate-500 bg-opacity-40 min-w-fit w-96 rounded-full p-5 ">
+
+                    <div class="shrink-0">
+                        <img class="h-16 w-16 object-cover rounded-full" src="static/images/py.png" alt="Current profile photo" />
+                    </div>
+                    <label class="block">
+                        <span class="sr-only">Choose profile photo</span>
+                        <input type="file" id="img" name="input_image"
+                            class="block min-w-full text-sm file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-md file:font-semibold file:bg-violet-50 file:text-violet-800 hover:file:bg-white required:ring-red-600"
+                            accept="image/png" required />
+                    </label>
+                </div>
+                <div class="data-inp flex flex-col space-y-8">
+                    <div class="space-y-1 flex flex-col">
+
+                        <textarea name="message" id="message" name="message" rows="3" maxlength="500"
+                            class="text-lg mt-1 px-3 py-2 bg-transparent shadow-sm shadow-slate-100 border-b-4 border-slate-300  placeholder-white focus:outline-none focus:border-slate-100 focus:ring-slate-300 block w-[30rem] rounded-md focus:ring-1"
+                            placeholder="Enter your Message here"></textarea>
+                        <div class="text-sm self-end text-slate-200 font-medium">*Max length 500 words</div>
+
+                        <input type="number" name="key" id="key"
+                            class="text-lg mt-1 px-3 py-2 bg-transparent shadow-sm shadow-slate-100 border-b-4 border-slate-300  placeholder-white focus:outline-none focus:border-slate-100 focus:ring-slate-300 block w-[30rem] rounded-md focus:ring-1"
+                            placeholder="Keys" />
+                    </div>
+                    <div class="sub flex items-center justify-around text-xl">
+                        <button id="encode_btn"
+                            class="submit bg-slate-100 font-semibold w-36 text-indigo-600 py-2 px-5 rounded hover:bg-white hover:font-bold ease-in-out">
+                            Encode
+                        </button>
+                        <button id="decode_btn"
+                            class="submit bg-slate-100 font-semibold w-36 text-indigo-600 py-2 px-5 rounded hover:bg-white hover:font-bold ease-in-out">
+                            Decode
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+
+
+
+        document.querySelector("#encode_btn").addEventListener("click", () => {
+            document.querySelector("#frm").action = "/encode";
+            document.querySelector("#frm").submit();
+        })
+        document.querySelector("#decode_btn").addEventListener("click", () => {
+            document.querySelector("#frm").action = "/decode";
+            document.querySelector("#frm").submit();
+        })
+    </script>
+</body>
+
+</html>

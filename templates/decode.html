@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Decode Message</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gradient-to-r from-emerald-300 to-blue-500 overflow-auto">
+    <div id="decode_div" class="opt flex h-screen w-screen items-center space-x-16 justify-center">
+        <div class="card">
+            <div class="rounded overflow-auto shadow-lg shadow-slate-700">
+                <img class="h-72 aspect-auto object-cover mx-auto" src="{{ image_path }}" alt="Sunset in the mountains">
+                <div class="px-6 py-4 flex flex-wrap items-center justify-around space-x-16">
+                    <div class="font-bold text-xl mb-2 text-slate-100">Input Image</div>
+                    <!-- download button -->
+                    <div class="flex justify-center">
+                        <a href="{{ image_path }}" download="image_path.png">
+                            <button
+                                class="bg-slate-100 font-semibold text-indigo-600 py-2 px-5 rounded hover:bg-white hover:font-bold  ease-in-out">
+                                Download
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="flex flex-col space-y-8">
+            <span class="text-2xl font-bold text-sky-100">Decoded Message</span>
+            <textarea name="message" rows="3" maxlength="500"
+                class="text-lg text-white mt-1 px-3 py-2 bg-transparent shadow-sm shadow-slate-100 border-b-4 border-slate-300  placeholder-white focus:outline-none focus:border-slate-100 focus:ring-slate-300 block w-[30rem] rounded-md focus:ring-1"
+                placeholder="Message" disabled>{{ message }} </textarea>
+        </div>
+    </div>
+</body>
+
+</html>
