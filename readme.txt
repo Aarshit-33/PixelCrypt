@@ -1,8 +1,8 @@
 Project Title: Message hiding inside image using image processing.
 
 Team Members: 
-1] Azim Baldiwala (22BCE502)
-2] Arshit Jolapara (22BCE510)
+1] Arshit Jolapara 
+2] Azim Baldiwala 
 
 --------------------------------------------------------------------------------------
 
